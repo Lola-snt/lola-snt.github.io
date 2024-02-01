@@ -1,4 +1,4 @@
-<h1 align="center"> Bem-vindo ao meu repositório do meu portfólio! </h1>
+<h1 align="center"> Bem-vindo ao repositório do meu portfólio! </h1>
 
 ![lola_2_-removebg-preview](https://github.com/Lola-snt/lola-snt.github.io/assets/122684180/81860ef7-fbce-45fb-8538-4f6a70196f45)
 
