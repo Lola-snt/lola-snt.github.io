@@ -69,53 +69,7 @@
       onscroll(document, headerScrolled)
     }
   
-    let backtotop = select('.back-to-top')
-    if (backtotop) {
-      const toggleBacktotop = () => {
-        if (window.scrollY > 100) {
-          backtotop.classList.add('active')
-        } else {
-          backtotop.classList.remove('active')
-        }
-      }
-      window.addEventListener('load', toggleBacktotop)
-      onscroll(document, toggleBacktotop)
-    }
-  
-    on('click', '.mobile-nav-toggle', function(e) {
-      select('#navbar').classList.toggle('navbar-mobile')
-      this.classList.toggle('bi-list')
-      this.classList.toggle('bi-x')
-    })
-  
-    on('click', '.navbar .dropdown > a', function(e) {
-      if (select('#navbar').classList.contains('navbar-mobile')) {
-        e.preventDefault()
-        this.nextElementSibling.classList.toggle('dropdown-active')
-      }
-    }, true)
-    on('click', '.scrollto', function(e) {
-      if (select(this.hash)) {
-        e.preventDefault()
-  
-        let navbar = select('#navbar')
-        if (navbar.classList.contains('navbar-mobile')) {
-          navbar.classList.remove('navbar-mobile')
-          let navbarToggle = select('.mobile-nav-toggle')
-          navbarToggle.classList.toggle('bi-list')
-          navbarToggle.classList.toggle('bi-x')
-        }
-        scrollto(this.hash)
-      }
-    }, true)
-  
-    window.addEventListener('load', () => {
-      if (window.location.hash) {
-        if (select(window.location.hash)) {
-          scrollto(window.location.hash)
-        }
-      }
-    });
+
     const typed = select('.typed')
     if (typed) {
       let typed_strings = typed.getAttribute('data-typed-items')
@@ -129,46 +83,5 @@
       });
     }
   
-    const portfolioLightbox = GLightbox({
-      selector: '.portfolio-lightbox'
-    });
-
-    new Swiper('.testimonials-slider', {
-      speed: 600,
-      loop: true,
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false
-      },
-      slidesPerView: 'auto',
-      pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
-        clickable: true
-      }
-    });
-  
-    new Swiper('.portfolio-details-slider', {
-      speed: 400,
-      loop: true,
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
-        clickable: true
-      }
-    });
-  
-    let preloader = select('#preloader');
-    if (preloader) {
-      window.addEventListener('load', () => {
-        preloader.remove()
-      });
-    }
-
-    new PureCounter();
   
   })()
