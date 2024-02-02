@@ -206,17 +206,19 @@ body {
   
   .navbar a,
   .navbar a:focus {
-    display: flexbox;
+    display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 15px;
-    font-weight: auto;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
     padding: 0;
-    white-space: row;
-    transition: 10s;
-    letter-spacing: 0.3s;
+    white-space: nowrap;
+    transition: 0.3s;
+    letter-spacing: 0.4px;
     position: relative;
     text-transform: uppercase;
+    font-family: system-ui;
   }
   
   .navbar a i,
