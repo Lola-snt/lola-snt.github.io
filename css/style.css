@@ -361,7 +361,7 @@ body {
     line-height: 1.55;
     margin: 0 auto;
     text-align: center;
-    box-shadow: 0 0 0 10px #0078ff;
+    box-shadow: 0 0 0 10px grey;
     display: block;
   }
   .service-box {
@@ -375,7 +375,7 @@ body {
   .service-box:hover .ico-circle {
     transition: all 500ms ease;
     color: #fff;
-    background-color: #0078ff;
+    background-color: rgb(48, 48, 78);
     box-shadow: 0 0 0 10px #cde1f8;
   }
   
@@ -444,7 +444,7 @@ body {
     color: #fff;
     padding: 0 15px 5px;
     overflow: hidden;
-    background-color: #0078ff;
+    background-color: gray;
     border-radius: 4px;
   }
   
